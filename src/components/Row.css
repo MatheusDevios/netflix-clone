@@ -7,7 +7,6 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
-  padding: 1rem;
   transition: all ease 0.6s;
   margin-bottom: 1rem;
 }
