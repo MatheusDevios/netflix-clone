@@ -4,7 +4,7 @@ const categories = [
   {
     name: "trending",
     title: "Trending",
-    path: `/trending/all/week?api_key=${API_KEY}&language=pt-BR`,
+    path: `/trending/all/week?api_key=${API_KEY}`,
     isLarge: true,
   },
   {
@@ -16,7 +16,7 @@ const categories = [
   {
     name: "topRated",
     title: "Top Rated",
-    path: `/movie/top_rated?api_key=${API_KEY}&language=pt-BR`,
+    path: `/movie/top_rated?api_key=${API_KEY}`,
     isLarge: false,
   },
   {

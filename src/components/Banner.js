@@ -4,6 +4,7 @@ import "./Banner.css";
 
 function Banner() {
   const [movie, setMovie] = React.useState({});
+  let firstDate = new Date(movie.first_air_date);
 
   const fetchRandomMovie = async () => {
     try {
@@ -40,6 +41,11 @@ function Banner() {
         <h1 className="banner-title">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
+        <div className="info">
+          <div className="points">{movie.vote_average} Points</div>
+          <div className="year">{firstDate.getFullYear()}</div>
+        </div>
+
         <div className="banner-buttons-container">
           <button className="banner-button">Assistir</button>
           <button className="banner-button">Minha Lista</button>

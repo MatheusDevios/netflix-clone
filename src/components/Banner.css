@@ -2,30 +2,32 @@
   color: white;
   object-fit: contain;
   height: 448px;
+  margin-left: 30px;
 }
 
 .banner-content {
-  margin-left: 30px;
   padding-top: 140px;
-  height: 190px;
+  height: inherit;
+  width: inherit;
+  background: linear-gradient(to top, #111 10%, transparent  90%);
+  background: linear-gradient(to right, #111 30%, transparent  70%);
 }
 
 .banner-title {
+  margin-left: 30px;
   font-size: 3rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
 }
 
 .banner-description {
+  margin-left: 30px;
   width: 45rem;
   line-height: 1.3;
   padding-top: 1rem;
   font-size: 0.8rem;
   max-width: 360px;
   height: 80px;
-}
-
-.banner-buttons-container {
 }
 
 .banner-button {
@@ -42,6 +44,9 @@
   background-color: rgba(51, 51, 51, 0.5);
   padding-bottom: 0.5rem;
 }
+.banner-buttons-container {
+  padding-left: 1.2rem;
+}
 
 .banner-button:hover {
   color: #000;
@@ -49,24 +54,15 @@
   transition: all 0.2s;
 }
 
-.btn {
-  width: max-content;
+.info {
+  padding-left: 2rem;
+}
+.points {
   display: inline-block;
-  color: #eecaca;
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  border: 1px solid #eecaca;
-  transition: all 400ms ease;
+  padding-right: 1rem;
+  padding-bottom: 0.7rem;
+  color: #46d369;
 }
-
-.btn:hover {
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.953);
-  border-color: transparent;
-}
-
-.btn-primary{
-  background: #eecaca;
-  color: rgba(0, 0, 0, 0.953);
+.year {
+  display: inline-block;
 }
