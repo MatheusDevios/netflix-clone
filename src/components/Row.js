@@ -11,7 +11,7 @@ function Row({ title, path, isLarge }) {
   const [movies, setMovies] = React.useState([]);
   const [trailerUrl, setTrailerUrl] = React.useState("");
   const [scrollX, setScrollX] = React.useState(0);
-  const [scrollY, setScrollY] = React.useState(0);
+  // const [scrollY, setScrollY] = React.useState(0);
   const handleOnClick = (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");
@@ -50,13 +50,12 @@ function Row({ title, path, isLarge }) {
     setScrollX(x);
   };
   const handleRight = () => {
-    let x = scrollY - Math.round(window.innerWidth / 2);
+    let x = scrollX - Math.round(window.innerWidth / 2);
     let listW = movies.length * 150;
     if ((window.innerWidth - listW) > x) {
-      x = (window.innerWidth - listW) - 40;
+      x = (window.innerWidth - listW) - 70;
     }
     setScrollX(x);
-    setScrollY(0)
   };
 
   return (
