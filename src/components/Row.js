@@ -47,7 +47,7 @@ function Row({ title, path, isLarge }) {
               onClick={() => handleOnClick(movie)}
               key={movie.id}
               src={`${imageHost}${
-                isLarge ? movie.backdrop_path : movie.poster_path
+                isLarge ? movie.poster_path : movie.poster_path
               }`}
               alt={movie.name}
             ></img>

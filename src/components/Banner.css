@@ -32,7 +32,7 @@
   cursor: pointer;
   color: #fff;
   outline: none;
-  border: none;
+  border: 1px solid #eecaca;
   font-weight: 700;
   border-radius: 0.2vw;
   padding-left: 2rem;
@@ -47,4 +47,26 @@
   color: #000;
   background-color: #e6e6e6;
   transition: all 0.2s;
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: #eecaca;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid #eecaca;
+  transition: all 400ms ease;
+}
+
+.btn:hover {
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.953);
+  border-color: transparent;
+}
+
+.btn-primary{
+  background: #eecaca;
+  color: rgba(0, 0, 0, 0.953);
 }

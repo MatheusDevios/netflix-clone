@@ -1,5 +1,5 @@
 .row-container {
-  margin-left: 20px;
+  margin-left: 1.4rem;
   color: white;
 }
 
@@ -7,7 +7,7 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
-  padding: 20px;
+  padding: 1rem;
 }
 
 .row-cards::-webkit-scrollbar {
@@ -17,17 +17,18 @@
 .movie-card {
   object-fit: contain;
   width: 100%;
-  max-height: 100px;
-  margin-bottom: 10px;
-  transition: transform 450ms;
+  max-height: 180px;
+  margin-bottom: 1rem;
+  transform: scale(0.9);
+  transition: all ease 0.4s;
+  cursor: pointer;
 }
 
 .movie-card-large {
   object-fit: contain;
   width: 100%;
-  max-height: 250px;
-  margin-bottom: 10px;
-  transition: transform 450ms;
+  max-height: 280px;
+  margin-bottom: 1rem;
 }
 
 .movie-card:hover {
