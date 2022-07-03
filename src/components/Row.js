@@ -51,9 +51,9 @@ function Row({ title, path, isLarge }) {
   };
   const handleRight = () => {
     let x = scrollX - Math.round(window.innerWidth / 2);
-    let listW = movies.length * 150;
-    if ((window.innerWidth - listW) > x) {
-      x = (window.innerWidth - listW) - 70;
+      let listW = movies.length * 190;
+      if ((window.innerWidth - listW) > x) {
+        x = (window.innerWidth - listW) - 70;
     }
     setScrollX(x);
   };
@@ -76,7 +76,7 @@ function Row({ title, path, isLarge }) {
               key={movie.id}
               src={`${imageHost}${
                 movie.poster_path
-                // isLarge ? movie.poster_path : movie.poster_path
+                // isLarge ? movie. : movie.poster_path
               }`}
               alt={movie.name}
             ></img>

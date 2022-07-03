@@ -18,7 +18,7 @@
 
 .movie-card {
   object-fit: contain;
-  width: 150px;
+  width: 190px;
   /* max-height: 180px; */
 
   transform: scale(0.9);
@@ -28,7 +28,7 @@
 
 .movie-card-large {
   object-fit: contain;
-  width: 150px;
+  width: 190px;
   /* max-height: 280px; */
 }
 
