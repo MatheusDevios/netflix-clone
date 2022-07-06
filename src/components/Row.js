@@ -7,7 +7,7 @@ import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 const imageHost = "https://image.tmdb.org/t/p/original/";
-function Row({ title, path, isLarge }) {
+function Row({ title, path, isLarge, onLoading }) {
   const [movies, setMovies] = React.useState([]);
   const [trailerUrl, setTrailerUrl] = React.useState("");
   const [scrollX, setScrollX] = React.useState(0);
@@ -31,7 +31,8 @@ function Row({ title, path, isLarge }) {
       const data = await getMovies(_path);
       console.log("data ", data);
       setMovies(data?.results);
-      console.log("ada", movies)
+      console.log("ada", movies);
+      onLoading(false);
     } catch (error) {
       console.log("fetchMovies error: ", error);
     }
@@ -39,6 +40,7 @@ function Row({ title, path, isLarge }) {
 
   useEffect(() => {
     fetchMovies(path);
+    // props.onLoading(false);
     // eslint-disable-next-line
   }, [path]);
 
@@ -51,9 +53,9 @@ function Row({ title, path, isLarge }) {
   };
   const handleRight = () => {
     let x = scrollX - Math.round(window.innerWidth / 2);
-      let listW = movies.length * 190;
-      if ((window.innerWidth - listW) > x) {
-        x = (window.innerWidth - listW) - 70;
+    let listW = movies.length * 190;
+    if (window.innerWidth - listW > x) {
+      x = window.innerWidth - listW - 70;
     }
     setScrollX(x);
   };

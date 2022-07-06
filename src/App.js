@@ -3,16 +3,20 @@ import Row from "./components/Row";
 import categories from "./api";
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 
 function App() {
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
+  useLayoutEffect(() => {
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 2000);
   }, []);
+
+  // const handlingLoading = () => {
+  //   setLoading(false);
+  // };
 
   return (
     <div className="App">
@@ -34,6 +38,7 @@ function App() {
                 title={category.title}
                 path={category.path}
                 isLarge={category.isLarge}
+                onLoading={setLoading}
               />
             );
           })}
