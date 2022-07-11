@@ -14,10 +14,6 @@ function App() {
     // }, 2000);
   }, []);
 
-  // const handlingLoading = () => {
-  //   setLoading(false);
-  // };
-
   return (
     <div className="App">
       {loading ? (
