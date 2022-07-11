@@ -6,7 +6,7 @@ import "./Row.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
-const imageHost = "https://image.tmdb.org/t/p/original/";
+const imageHost = "https://image.tmdb.org/t/p/original";
 function Row({ title, path, isLarge, onLoading }) {
   const [movies, setMovies] = React.useState([]);
   const [trailerUrl, setTrailerUrl] = React.useState("");
@@ -31,7 +31,6 @@ function Row({ title, path, isLarge, onLoading }) {
       const data = await getMovies(_path);
       console.log("data ", data);
       setMovies(data?.results);
-      console.log("ada", movies);
       onLoading(false);
     } catch (error) {
       console.log("fetchMovies error: ", error);
@@ -78,9 +77,9 @@ function Row({ title, path, isLarge, onLoading }) {
               key={movie.id}
               src={`${imageHost}${
                 movie.poster_path
-                // isLarge ? movie. : movie.poster_path
+                // isLarge ? movie.backdrop_path : movie.poster_path
               }`}
-              alt={movie.name}
+              alt={movie.title || movie.name || movie.original_name}
             ></img>
           );
         })}
