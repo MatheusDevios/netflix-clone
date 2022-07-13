@@ -20,7 +20,7 @@
 ## 🚀 Installation
 
 ```
-$ git clone [https://github.com/MatheusDevios/MatheusWeb.git](https://github.com/MatheusDevios/netflix-clone.git)
+$ git clone (https://github.com/MatheusDevios/netflix-clone.git)
 $ cd netflix-clone
 $ npm install
 $ npm start
